@@ -1,30 +1,33 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin: 0 auto;
-    font-family:'Roboto','sans-serif','shrikhand';
-    background-color: #fff;
+    font-family:'Roboto','sans-serif';
+    background-color: #ffffff;
    
 }
 
 /***** Header ******/
 .header {
-    display: block;
+  
     .logo{
-     display: inline-flex;
+     display: flex;
      justify-content: center;
      align-items: center;
      width: 100%;
      height: 63px;
+     font-size: 30px;
+     font-weight: 400;
      background: #ffffff;
-    }
-    .logo-img{
-        display: flex;
-        padding: 14px 89px 13px 89px;
+     font-family: 'shrikhand';
+     margin-block-start: 0px;
+     margin-block-end: 0px;
     }
     .location{
-        display: inline-flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         gap: 15px;
@@ -41,7 +44,105 @@ body {
         word-wrap: break-word;
     }
 }
+/***** book the meal section ****/
 
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+}
+/***** How it works ******/
+/***** Restaurants section ******/
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: aqua;
+    padding: 0px 18px;
+}
+.container .title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+}
+.card {
+    background: #ffffff;
+    width: 100%;
+    height: 251px;
+    margin-bottom: 18px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+.card-image{
+    width: 100%;
+    height: 170px; 
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+
+}
+
+.rest-1 {
+    background-position: 0px -53px;
+    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+
+.rest-2 {
+    background-position: 0px -153px;
+    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+
+.rest-3 {
+    background-position: 0px -50px;
+    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+.rest-4 {
+    background-position: 0px -53px;
+    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+.tag {
+    background-color: #99e2d0;
+    position: absolute;
+    width: 80px;
+    height: 29px;
+    top: 6%;
+    right: 5%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #008766;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.card h2 {
+    font-size: 18px;
+    font-weight: 700;
+    word-wrap: break-word;
+    margin-top: 16px;
+    padding-left: 16px;
+}
+
+.card p {
+    font-size: 17px;
+    font-weight: 300;
+    word-wrap: break-word;
+    margin-top: 5px;
+    padding-left: 16px;
+}
 /***** Footer ******/
 .footer {
     display: inline-flex;
@@ -60,7 +161,7 @@ body {
         justify-content: center;
         align-items: center;
         font-size: 18px;
-        font-family: shrikhand;
+        font-family: 'shrikhand';
         font-weight: 400;
         word-wrap: break-word;
         margin-block-start: 0px;
