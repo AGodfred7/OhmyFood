@@ -36,6 +36,7 @@ body {
         font-size: 18px;
         font-weight: 500;
         width: 100%;
+        height: 50px;
     }
     .text{
         font-size: 16px;
@@ -49,11 +50,47 @@ body {
 .about {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: #f6f6f6;
+    height: 287px;
+    width: 100%;
 }
+.about h2{
+        margin-top: 39px;
+        font-size: 24px;
+        font-weight: 700;
+        word-wrap: break-word;
+}
+.about p{
+        padding-left: 34px;
+        padding-right: 26px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        word-wrap: break-word;
+        margin-top: 40px;
+}
+.explore{
+        width: 218px;
+        height: 50px;
+        margin-top: 27px;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        border: none;
+        font-weight: 500;
+        color: white;
+        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);  
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
 /***** How it works ******/
+.how {
+    width: 100%;
+    height: 440px;
+}
 /***** Restaurants section ******/
 .restaurants{
     display: flex;
@@ -68,13 +105,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: aqua;
+    background: #f6f6f6;
     padding: 0px 18px;
 }
 .container .title {
     font-size: 24px;
     font-weight: 700;
-    margin-top: 30px;
+    margin-top: 54px;
     margin-bottom: 15px;
     word-wrap: break-word;
 }
@@ -98,22 +135,22 @@ body {
 
 .rest-1 {
     background-position: 0px -53px;
-    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/kitchen-west.jpg);
 }
 
 .rest-2 {
     background-position: 0px -153px;
-    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/elderflower.jpg);
 }
 
 .rest-3 {
     background-position: 0px -50px;
-    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/shoreditch-canteen.jpg);
 }
 
 .rest-4 {
     background-position: 0px -53px;
-    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/The-bay-leaf.jpg);
 }
 .tag {
     background-color: #99e2d0;
@@ -127,6 +164,7 @@ body {
     align-items: center;
     color: #008766;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
 }
 .card h2 {
     font-size: 18px;
@@ -142,6 +180,17 @@ body {
     word-wrap: break-word;
     margin-top: 5px;
     padding-left: 16px;
+}
+
+.card i{
+    font-size: 22px;
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+    
+}
+.card button:hover i{
+    color: #FF79DA;
 }
 /***** Footer ******/
 .footer {
