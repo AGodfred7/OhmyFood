@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
@@ -162,7 +162,7 @@ body {
 }
 .card.rest-1 {
   background-position: 0px -53px;
-  background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/kitchen-west.jpg);
+  background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/kitchen-west);
 }
 .card.rest-2 {
   background-position: 0px -153px;

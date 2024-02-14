@@ -3,8 +3,8 @@ $font-shrikhand: 'shrikhand';
 
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 body {
@@ -52,7 +52,7 @@ body {
     }
 }
 
-/* About section */
+/* Book the meal you want section */
 .about {
     display: flex;
     flex-direction: column;
