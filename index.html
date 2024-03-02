@@ -8,10 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+    <div class="spinner-container">
+        <div class="spinner"></div>
+    </div>
     <header class="header">
         <h1 class="logo">ohmyfood</h1>
         <nav class="location">
@@ -50,53 +53,120 @@
             </div>
         </div>
     </section>
-    <section class="container">
-        <div class="title">Restaurants</div>
-        <a href="restaurant1.html" class="card">
-            <div class="card-image rest-1"></div>
-            <div class="tag">New</div>
-            <h2>Kitchen West</h2>
-            <p>Angel</p>
-         <div class="heart--container">
-                <svg class="heart1" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.7206 2.40576L12.7208 2.40551C14.7226 0.15233 17.9035 -0.169451 20.0243 1.80187C22.5186 4.1243 22.656 8.32326 20.4123 10.8492L20.4122 10.8493L12.0978 20.2148C11.7596 20.5956 11.2372 20.5956 10.899 20.2148L2.5848 10.8495C0.34506 8.32357 0.482456 4.1245 2.97664 1.80201C5.09762 -0.169649 8.28271 0.152585 10.2799 2.40514L10.2805 2.40576L11.127 3.35732L11.5005 3.77727L11.8741 3.35732L12.7206 2.40576Z" stroke="#101010"></path>
-                </svg>                                                     
-                <svg class="heart2" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.365 1.43642C18.0103 -0.752643 14.5083 -0.358893 12.347 2.07392L11.5005 3.02548L10.654 2.07392C8.49701 -0.358893 4.99076 -0.752643 2.63607 1.43642C-0.0623635 3.94892 -0.20416 8.45829 2.21068 11.1817L10.5251 20.5474C11.0622 21.152 11.9345 21.152 12.4716 20.5474L20.7861 11.1817C23.2052 8.45829 23.0634 3.94892 20.365 1.43642V1.43642Z" fill="url(#paint0_linear_422_7)"></path>
-                    <defs>
-                    <lineargradient x1="11.5002" y1="-5.45961" x2="3.93443" y2="27.9928" gradientUnits="userSpaceOnUse">
-                        <stop offset="0" stop-color="#9356DC"></stop>
-                        <stop offset="1" stop-color="#FF79DA"></stop>
-                    </lineargradient>
-                    </defs>
-                </svg>                                                                                                                                                                                           
-         </div>
-        </a>
-        <a href="restaurant3.html" class="card">
-            <div class="card-image rest-2"></div>
-            <div class="tag">New</div>
-            <h2>Elderflower</h2>
-            <p>Old Street</p>
-            <a class="heart-btn"><img src="/Users/godfr/Documents/OhmyFood/images/icons/heart.svg" alt="like button"/></a>
-        </a>
-        <a href="restaurant4.html" class="card">
-            <div class="card-image rest-3"></div>
-            <h2>Shoreditch Canteen</h2>
-            <p>Shoreditch</p>
-            <img src="/Users/godfr/Documents/OhmyFood/images/icons/heart.svg" alt="like button"/>
-        </a>
-        <a href="restaurant2.html" class="card">
-            <div class="card-image rest-4"></div>
-            <h2>The Bay Leaf</h2>
-            <p>Hoxton</p>
-            <img src="/Users/godfr/Documents/OhmyFood/images/icons/heart.svg" alt="like button"/>
-        </a>
-    </section> 
+    <article class="restaurant-container">
+        <h6 id="eating-places-link">Restaurants</h6>
+        <div class="restaurant-card">
+            <a class="cards-link" href="restaurant1.html">
+                <img class="image-card-restaurant" src="/Users/godfr/Documents/OhmyFood/images/restaurants/kitchen-west.jpg" alt="kitchen west">
+                    <p class="new-label-overlay">New</p>
+                <div class="restaurant-card-all">
+                <div class="card-text">
+                    <h4>Kitchen West</h4>
+                    <h5>Angel</h5>
+                </div>
+            </a>
+                <div class="heart--container">
+                    <svg class="heart1" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.7206 2.40576L12.7208 2.40551C14.7226 0.15233 17.9035 -0.169451 20.0243 1.80187C22.5186 4.1243 22.656 8.32326 20.4123 10.8492L20.4122 10.8493L12.0978 20.2148C11.7596 20.5956 11.2372 20.5956 10.899 20.2148L2.5848 10.8495C0.34506 8.32357 0.482456 4.1245 2.97664 1.80201C5.09762 -0.169649 8.28271 0.152585 10.2799 2.40514L10.2805 2.40576L11.127 3.35732L11.5005 3.77727L11.8741 3.35732L12.7206 2.40576Z" stroke="#101010"/>
+                    </svg>                                                     
+                    <svg class="heart2" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.365 1.43642C18.0103 -0.752643 14.5083 -0.358893 12.347 2.07392L11.5005 3.02548L10.654 2.07392C8.49701 -0.358893 4.99076 -0.752643 2.63607 1.43642C-0.0623635 3.94892 -0.20416 8.45829 2.21068 11.1817L10.5251 20.5474C11.0622 21.152 11.9345 21.152 12.4716 20.5474L20.7861 11.1817C23.2052 8.45829 23.0634 3.94892 20.365 1.43642V1.43642Z" fill="url(#paint0_linear_422_7)"/>
+                        <defs>
+                        <linearGradient x1="11.5002" y1="-5.45961" x2="3.93443" y2="27.9928" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#9356DC"/>
+                        <stop offset="1" stop-color="#FF79DA"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>                                                                                       
+                </div>                                                                                      
+            </div>
+            <div class="restaurant-card">
+                <a class="cards-link" href="restaurant3.html">
+                    <img class="image-card-restaurant" src="/Users/godfr/Documents/OhmyFood/images/restaurants/elderflower.jpg" alt="Elderflower">
+                    <p class="new-label-overlay">New</p>
+                    <div class="restaurant-card-all">
+                        <div class="card-text">
+                            <h3>Elderflower</h3>
+                            <p>Old Street</p>
+                        </div>
+                </a>
+                    <div class="heart--container">
+                        <svg class="heart1" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.7206 2.40576L12.7208 2.40551C14.7226 0.15233 17.9035 -0.169451 20.0243 1.80187C22.5186 4.1243 22.656 8.32326 20.4123 10.8492L20.4122 10.8493L12.0978 20.2148C11.7596 20.5956 11.2372 20.5956 10.899 20.2148L2.5848 10.8495C0.34506 8.32357 0.482456 4.1245 2.97664 1.80201C5.09762 -0.169649 8.28271 0.152585 10.2799 2.40514L10.2805 2.40576L11.127 3.35732L11.5005 3.77727L11.8741 3.35732L12.7206 2.40576Z" stroke="#101010"/>
+                        </svg>                                                     
+                        <svg class="heart2" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.365 1.43642C18.0103 -0.752643 14.5083 -0.358893 12.347 2.07392L11.5005 3.02548L10.654 2.07392C8.49701 -0.358893 4.99076 -0.752643 2.63607 1.43642C-0.0623635 3.94892 -0.20416 8.45829 2.21068 11.1817L10.5251 20.5474C11.0622 21.152 11.9345 21.152 12.4716 20.5474L20.7861 11.1817C23.2052 8.45829 23.0634 3.94892 20.365 1.43642V1.43642Z" fill="url(#paint0_linear_422_7)"/>
+                            <defs>
+                            <linearGradient x1="11.5002" y1="-5.45961" x2="3.93443" y2="27.9928" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#9356DC"/>
+                            <stop offset="1" stop-color="#FF79DA"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>                                                                                       
+                    </div>                                           
+                </div>
+            </div>
+            <div class="restaurant-card">
+                <a class="cards-link" href="restaurant4.html">
+                    <img class="image-card-restaurant" src="/Users/godfr/Documents/OhmyFood/images/restaurants/shoreditch-canteen.jpg" alt="shoreditch-canteen">
+                    <div class="restaurant-card-all">
+                        <div class="card-text">
+                            <h4>Shoreditch Canteen</h4>
+                            <h5>Shoreditch</h5>
+                        </div>
+                    </div>
+                </a>
+                       <div class="heart--container">
+                        <svg class="heart1" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.7206 2.40576L12.7208 2.40551C14.7226 0.15233 17.9035 -0.169451 20.0243 1.80187C22.5186 4.1243 22.656 8.32326 20.4123 10.8492L20.4122 10.8493L12.0978 20.2148C11.7596 20.5956 11.2372 20.5956 10.899 20.2148L2.5848 10.8495C0.34506 8.32357 0.482456 4.1245 2.97664 1.80201C5.09762 -0.169649 8.28271 0.152585 10.2799 2.40514L10.2805 2.40576L11.127 3.35732L11.5005 3.77727L11.8741 3.35732L12.7206 2.40576Z" stroke="#101010"/>
+                        </svg>                                                     
+                        <svg class="heart2" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.365 1.43642C18.0103 -0.752643 14.5083 -0.358893 12.347 2.07392L11.5005 3.02548L10.654 2.07392C8.49701 -0.358893 4.99076 -0.752643 2.63607 1.43642C-0.0623635 3.94892 -0.20416 8.45829 2.21068 11.1817L10.5251 20.5474C11.0622 21.152 11.9345 21.152 12.4716 20.5474L20.7861 11.1817C23.2052 8.45829 23.0634 3.94892 20.365 1.43642V1.43642Z" fill="url(#paint0_linear_422_7)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_422_7" x1="11.5002" y1="-5.45961" x2="3.93443" y2="27.9928" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#9356DC"/>
+                            <stop offset="1" stop-color="#FF79DA"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>                                                                                       
+                    </div>   
+                </div>
+            </div>
+            <div class="restaurant-card">
+                <a class="cards-link" href="restaurant2.html">
+                    <img class="image-card-restaurant" src="/Users/godfr/Documents/OhmyFood/images/restaurants/The-bay-leaf.jpg" alt="The-bay-leaf">
+                    <div class="restaurant-card-all">
+                        <div class="card-text">
+                            <h4>The Bay Leaf</h4>
+                            <h5>Hoxton</h5>
+                        </div>
+                    </div>
+                </a>
+                    <div class="heart"></div>
+                    <div class="heart--container">
+                        <svg class="heart1" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.7206 2.40576L12.7208 2.40551C14.7226 0.15233 17.9035 -0.169451 20.0243 1.80187C22.5186 4.1243 22.656 8.32326 20.4123 10.8492L20.4122 10.8493L12.0978 20.2148C11.7596 20.5956 11.2372 20.5956 10.899 20.2148L2.5848 10.8495C0.34506 8.32357 0.482456 4.1245 2.97664 1.80201C5.09762 -0.169649 8.28271 0.152585 10.2799 2.40514L10.2805 2.40576L11.127 3.35732L11.5005 3.77727L11.8741 3.35732L12.7206 2.40576Z" stroke="#101010"/>
+                        </svg>                                                     
+                        <svg class="heart2" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.365 1.43642C18.0103 -0.752643 14.5083 -0.358893 12.347 2.07392L11.5005 3.02548L10.654 2.07392C8.49701 -0.358893 4.99076 -0.752643 2.63607 1.43642C-0.0623635 3.94892 -0.20416 8.45829 2.21068 11.1817L10.5251 20.5474C11.0622 21.152 11.9345 21.152 12.4716 20.5474L20.7861 11.1817C23.2052 8.45829 23.0634 3.94892 20.365 1.43642V1.43642Z" fill="url(#paint0_linear_422_7)"/>
+                            <defs>
+                            <linearGradient x1="11.5002" y1="-5.45961" x2="3.93443" y2="27.9928" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#9356DC"/>
+                            <stop offset="1" stop-color="#FF79DA"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>                                                                                       
+                    </div>                                      
+                </div>
+            </div>
+            
+        </div>
+    </article> 
     <footer class="footer">
         <h2 class="title">ohmyfood</h2>
         <ul class="links">
-            <li><img src="/Users/godfr/Documents/OhmyFood/images/icons/cuttlery.svg" alt="cuttlery"/><a>Suggest a restaurant</a></li>
-            <li><img src="/Users/godfr/Documents/OhmyFood/images/icons/hands.svg" alt="handshare"/><a>Become a partner</a></li>
+            <li class="spacing"><img src="/Users/godfr/Documents/OhmyFood/images/icons/cuttlery.svg" alt="cuttlery"/><a>Suggest a restaurant</a></li>
+            <li class="spacing"><img src="/Users/godfr/Documents/OhmyFood/images/icons/hands.svg" alt="handshare"/><a>Become a partner</a></li>
             <li><a>Legal notice</a></li>
             <li><a>Contact</a></li>
         </ul>
