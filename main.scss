@@ -591,10 +591,70 @@ body {
 
 
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 960px) {
     .menu {
       width: 1055px;
-      margin-left: 140px;
+      padding: 0px 70px 0px 70px;
 
     }
   }
+
+
+  @media screen and (min-width: 960px) {
+    .footer {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 50px;
+      height: 114px;
+      padding-bottom: inherit;
+  }
+  .unordered-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: inherit;
+}
+  }
+/****************heart restaurant*********/
+
+.hidden {
+    display: none;
+}
+
+.heart--container2 {
+    cursor: pointer;
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+.heart2 {
+    display: none;
+}
+
+#heart-toggle:checked + .heart--container .heart1 {
+    display: none;
+}
+
+#heart-toggle:checked + .heart--container .heart2 {
+    display: block;
+}
+
+.heart--container2:hover .heart1 {
+    display: none;
+}
+
+.heart--container2:hover .heart2 {
+    display: block;
+}
+
+/* Visually hide the label */
+.heart--container2 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
