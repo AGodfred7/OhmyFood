@@ -10,29 +10,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<body class=".body-menu-pages">
+<body>
     <header class="header-restaurants">
         <a href="index.html"><img src="/Users/godfr/Documents/OhmyFood/images/icons/GoBack.svg" alt="location pin"/></a>
         <h1 class="logo">ohmyfood</h1>
     </header>
     <section class="pic1"></section>
     <main class="menu">
-        <div class="todays-menu">
-            <h1 class="b">Kitchen West</h1>
-            <div class="heart--container">
-                <svg class="heart1" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.7206 2.40576L12.7208 2.40551C14.7226 0.15233 17.9035 -0.169451 20.0243 1.80187C22.5186 4.1243 22.656 8.32326 20.4123 10.8492L20.4122 10.8493L12.0978 20.2148C11.7596 20.5956 11.2372 20.5956 10.899 20.2148L2.5848 10.8495C0.34506 8.32357 0.482456 4.1245 2.97664 1.80201C5.09762 -0.169649 8.28271 0.152585 10.2799 2.40514L10.2805 2.40576L11.127 3.35732L11.5005 3.77727L11.8741 3.35732L12.7206 2.40576Z" stroke="#101010"></path>
-                </svg>                                                     
-                <svg class="heart2" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.365 1.43642C18.0103 -0.752643 14.5083 -0.358893 12.347 2.07392L11.5005 3.02548L10.654 2.07392C8.49701 -0.358893 4.99076 -0.752643 2.63607 1.43642C-0.0623635 3.94892 -0.20416 8.45829 2.21068 11.1817L10.5251 20.5474C11.0622 21.152 11.9345 21.152 12.4716 20.5474L20.7861 11.1817C23.2052 8.45829 23.0634 3.94892 20.365 1.43642V1.43642Z" fill="url(#paint0_linear_422_7)"></path>
-                    <defs>
-                    <linearGradient id="paint0_linear_422_7" x1="11.5002" y1="-5.45961" x2="3.93443" y2="27.9928" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stop-color="#9356DC"></stop>
-                    <stop offset="1" stop-color="#FF79DA"></stop>
-                    </linearGradient>
-                    </defs>
-                </svg>                                                                                       
-            </div>                          
+        <div class="name">
+            <h2>Kitchen West</h2>
+            <input type="checkbox" id="heart1" class="heart-toggle" />
+                <label for="heart1"><span>heart</span>
+                    <svg class="heart1" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!--  linear gradient for heart fill -->
+                        <defs>
+                            <linearGradient id="heartGradient" x1="0" y1="0" x2="100%" y2="0">
+                                <stop offset="0%" stop-color="#9356DC" />
+                                <stop offset="100%" stop-color="#FF79DA" />
+                            </linearGradient>
+                            <!--  linear gradient for heart fill on hover -->
+                            <linearGradient id="heartHoverGradient" x1="0" y1="0" x2="100%" y2="0">
+                                <stop offset="0%" stop-color="#9356DC" />
+                                <stop offset="100%" stop-color="#FF79DA" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M12.7206 2.40576L12.7208 2.40551C14.7226 0.15233 17.9035 -0.169451 20.0243 1.80187C22.5186 4.1243 22.656 8.32326 20.4123 10.8492L20.4122 10.8493L12.0978 20.2148C11.7596 20.5956 11.2372 20.5956 10.899 20.2148L2.5848 10.8495C0.34506 8.32357 0.482456 4.1245 2.97664 1.80201C5.09762 -0.169649 8.28271 0.152585 10.2799 2.40514L10.2805 2.40576L11.127 3.35732L11.5005 3.77727L11.8741 3.35732L12.7206 2.40576Z" stroke="#101010"/>
+                    </svg>
+                </label>
         </div>
           
         
@@ -109,3 +113,4 @@
     </footer>
 
 </body>    
+    
