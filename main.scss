@@ -14,6 +14,7 @@ $no-margin: 0px;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+  
 }
 @mixin flexflowcenter{
     display: flex;
@@ -24,17 +25,31 @@ body {
     margin: 0 auto;
     font-family: $font-roboto;
     background-color: #ffffff;
+    max-width: 1440px;
+}
+section {
+  padding: 0px 80px 0px 80px;
+  align-items: center;
+}
+article {
+  padding: 0px 80px 0px 80px;
+  align-items: center;
+  background-color: $LightGrayBG;
 }
 
-/* Header home page */
-.header {
+
+/*********************** Header home page ***************************/
+header {
     display: flex;
     flex-direction: column;
 
+
     .logo {
-        @include flexflowcenter;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        height: 63px;
+        height: 96px;
         font-size: 30px;
         font-weight: 400;
         background: #ffffff;
@@ -50,15 +65,138 @@ body {
         font-size: 18px;
         font-weight: 500;
         width: 100%;
-        height: 50px;
-    }
-
-    .text {
+        height: 50px; 
+      p {
         font-size: 16px;
         font-weight: 500;
         font-family: $font-roboto;
         word-wrap: break-word;
     }
+}
+}
+
+/******************* Book the meal you want section *************************/
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 37vh;
+}
+  .about h2 {
+      font-size: 24px;
+      font-weight: 700;
+      word-wrap: break-word;
+  }
+  .about p {
+      padding: 0 26px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 300;
+      word-wrap: break-word;
+
+  }
+  .explore {
+      width: 218px;
+      height: 50px;
+      border-radius: 25px;
+      @include flexflowcenter;
+      font-size: 16px;
+      border: none;
+      font-weight: 500;
+      color: white;
+      background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+/******************* How it works *************************/
+
+.how {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+.how h2 {
+      margin-top: 48px;
+      padding-left: 20px;
+      font-size: 24px;
+      font-weight: 700;
+      width: 100%;
+  }
+
+.how-container {
+      margin-top: 26px;
+      padding: 0 20px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      @media only screen and (min-width: 960px) {
+        flex-direction: row;
+      }
+  }
+
+.how-filter {
+    background-color: #f6f6f6;
+    height: 70px;
+    width: 100%;
+    max-width: 1100px;
+    min-width: 300px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 27px;
+    word-wrap: break-word;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+ h5 {
+        display: flex;
+        position: absolute;
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+        align-items: center;
+        background-color: #9356DC;
+        padding: 6px;
+        width: 20px;
+        height: 20px;
+        border-radius: 15px;
+        left: -10px;  
+ }
+   .text {
+          font-size: 16px;
+          display: flex;
+          font-weight: 500;
+      }
+  }
+
+  .homepage-icons {
+    fill: #353535;
+  }
+  .homepage-icons :hover {
+    fill: #9356DC;
+  }
+
+/******************* restaurants *************************/
+.restaurant-container {
+  margin-top: 40px;
+  padding-bottom: 40px;
+  background-color: #F6F6F6;
+    h2 {
+    padding-top: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+}
 }
 
 #eating-places-link {
@@ -66,336 +204,156 @@ body {
   width: 100%;
 }
 
-/* Book the meal you want section */
-.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f6f6f6;
-    height: 287px;
-    width: 100%;
-
-    h2 {
-        margin-top: 39px;
-        font-size: 24px;
-        font-weight: 700;
-        word-wrap: break-word;
-    }
-
-    p {
-        padding: 0 26px;
-        text-align: center;
-        font-size: 18px;
-        font-weight: 300;
-        word-wrap: break-word;
-        margin-top: 40px;
-    }
-
-    .explore {
-        width: 218px;
-        height: 50px;
-        margin-top: 27px;
-        border-radius: 25px;
-        @include flexflowcenter;
-        font-size: 16px;
-        border: none;
-        font-weight: 500;
-        color: white;
-        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    }
+/* Center the grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  padding-top: 30px;
+  justify-content: center;
 }
 
-.homepage-icons {
-  fill: #353535;
-}
-.homepage-icons :hover {
-  fill: #9356DC;
-}
-
-/* How it works section */
-.how {
-    width: 100%;
-    padding-bottom: 50px;
-
-    h2 {
-        margin-top: 48px;
-        padding-left: 20px;
-        font-size: 24px;
-        font-weight: 700;
-    }
-}
-    .how-container {
-        margin-top: 26px;
-        padding: 0 20px;
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        @media only screen and (min-width: 960px) {
-          flex-direction: row;
-        }
-    }
-
-    .how-filter {
-      background-color: #f6f6f6;
-      height: 72px;
-      width: 100%;
-      border-radius: 20px;
-      position: relative;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 27px;
-      word-wrap: break-word;
-      padding: 0 25px;
-      font-size: 16px;
-      font-weight: 500;
-      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-      h5 {
-          display: flex;
-          position: absolute;
-          font-size: 14px;
-          font-weight: 500;
-          color: white;
-          align-items: center;
-          background-color: #9356DC;
-          padding: 6px;
-          width: 20px;
-          height: 20px;
-          border-radius: 15px;
-          left: -10px;  
-      h3 {
-            font-size: 16px;
-            display: flex;
-            font-weight: 500;
-        }
-    }
-  }
-  
-
-
-// Restaurants section
-
-   .card-image {
-      width: 100%;
-      height: 170px;
-      background-size: cover;
-      border-radius: 15px 15px 0 0;
-    }
-  
-    .rest-1 {
-      background-position: 0px -53px;
-      background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/kitchen-west.jpg);
-    }
-  
-    .rest-2 {
-      background-position: 0px -153px;
-      background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/elderflower.jpg);
-    }
-  
-    .rest-3 {
-      background-position: 0px -50px;
-      background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/shoreditch-canteen.jpg);
-    }
-  
-    .rest-4 {
-      background-position: 0px -53px;
-      background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/The-bay-leaf.jpg);
-    }
-  
-    .tag {
-      background-color: #99e2d0;
-      position: absolute;
-      width: 80px;
-      height: 29px;
-      top: 6%;
-      right: 5%;
-      @include flexflowcenter;
-      color: #008766;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-      border-radius: 2px;
-    } 
-
-    .cards-link {
-      display: flex;
-      text-decoration: none;
-      position: relative;
-      justify-content: flex-end;
-    }
-/* menu pages */
-.header-restaurants {
-    display: flex;
-    height: 63px;
+/* Card layout */
+.restaurant-card {
     position: relative;
-    
-    .logo {
-      @include flexflowcenter;
-      width: 100%;
-      font-size: 30px;
-      font-weight: 400;
-      background: #ffffff;
-      font-family: 'shrikhand';
-      margin-block-start: 0px;
-      margin-block-end: 0px;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    }
-  }
-  
-  .header-restaurants a {
-    position: absolute;
-    left: 17px;
-    bottom: 13px;
-  }
-  
-  .pic1 {
-    width: 100%;
-    height: 275px;
-    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/kitchen-west.jpg);
-    background-size: cover;
-    z-index: 1;
-  }
-
-  .pic2 {
-    width: 100%;
-    height: 275px;
-    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/The-bay-leaf.jpg);
-    background-size: cover;
-    z-index: 1;
-  }
-
-  .pic3 {
-    width: 100%;
-    height: 275px;
-    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/elderflower.jpg);
-    background-size: cover;
-    z-index: 1;
-  }
-  
-  .pic4 {
-    width: 100%;
-    height: 275px;
-    background-image: url(/Users/godfr/Documents/OhmyFood/images/restaurants/shoreditch-canteen.jpg);
-    background-size: cover;
-    z-index: 1;
-  }
-  .menu {
-    width: 100%;
-    background-color: #f6f6f6;
-    border-top-right-radius: 40px;
-    border-top-left-radius: 40px;
-    gap: 40px;
-    display: flex;
-    flex-direction: column;
-    margin-top: -30px;
-  }
-  
-  .name {
-    display: flex;
-    margin-top: 34px;
-    padding-left: 17px;
-    padding-right: 23px;
-    align-items: center;
-    justify-content: space-between;
-    height: 27px;
-    h2 {
-      font-size: 28px;
-      font-family: 'Shrikhand';
-      font-weight: 400;
-      word-wrap: break-word;
-      color: #101010;
-    }
-    img {
-      height: 21px;
-      width: 22px;
-    }
-  }
-  
-  .list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-left: 13px;
-    padding-right: 13px;
-    list-style: none;
-
-    h3 {
-      font-size: 16px;
-      font-weight: 300;
-      border-bottom: 3px #99e2d0 solid;
-      width: 40PX;
-      height: 27px;
-    }
-  }
-  
-  .dish {
-    height: 72px;
-    background-color: #ffffff;
-    position:relative;
-    padding: 15px 15px 15px 15px;
+    overflow: hidden;
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    .text {
-      font-size: 18px;
-      font-weight: 500;
-      height: 21px;
-    }
-    .second {
-      font-size: 15px;
-      font-weight: 300;
-    }
-    .price {
-      position: absolute;
-      font-size: 15px;
-      font-weight: 700;
-      right: 15px;
-      bottom: 15px;
-    }
-  }
-  .position-btn{
-    display: flex;
-    justify-content: center;
-  }
-  .Order-btn {
-    width: 186px;
-    height: 50px;
-    margin-bottom: 27px;
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    border: none;
-    font-weight: 500;
-    color: white;
-    background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  
-  }
-
-  .unordered-list{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-  }
-  .spacing{
-    display: flex;
-    gap: 5px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    max-width: 490px;
+    max-height: 251px;
 }
-/***** Footer home page ******/
-  .footer {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 22px 25px;
-  background-color: #353535;
+
+/* Heart toggle */
+.heart-toggle {
+  display: none;
+}
+
+.heart-toggle + label svg {
+  cursor: pointer;
+    transition: fill 0.3s ease, stroke 0.3s ease; 
+    position: absolute;
+    bottom: 30px; 
+    right: 20px; 
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+/*  heart style on hover */
+.heart-toggle:not(:checked) + label:hover svg path {
+  fill: url(#heartHoverGradient); /* Change fill color on hover */
+  stroke: transparent; /* Hide the heart border on hover */
+}
+
+/*  heart style when checked */
+.heart-toggle:checked + label svg path {
+  fill: url(#heartGradient); /* Use linear gradient for fill when checked */
+  stroke: transparent; /* Hide the heart border when checked */
+}
+
+/*  linear gradient for heart fill */
+#heartGradient {
+  fill: url(#heartGradient);
+}
+
+/*  linear gradient for heart fill on hover */
+#heartHoverGradient {
+  fill: url(#heartHoverGradient);
+}
+
+/*  linear gradient */
+linearGradient#heartGradient {
+  stop-color: #9356DC;
+  stop-opacity: 1;
+}
+
+linearGradient#heartGradient stop:nth-child(2) {
+  stop-color: #FF79DA;
+  stop-opacity: 1;
+}
+
+/*  linear gradient for heart fill on hover */
+linearGradient#heartHoverGradient {
+  stop-color: #9356DC; 
+  stop-opacity: 1;
+}
+
+linearGradient#heartHoverGradient stop:nth-child(2) {
+  stop-color: #FF79DA;
+  stop-opacity: 1;
+}
+
+/************* Rest of your card content styling */
+.image-card-restaurant {
   width: 100%;
-  height: 186px;
-  gap: 16px;
-  color: white;
+  height: 231px;
+  display: block;
+  top: -57px;
+  position: relative;
+  object-fit: cover;
+}
+
+.new-label-overlay {
+  position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: $tertiary;
+    color: #008766;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    width: 80px;
+    display: flex;
+    height: 29px;
+    align-items: center;
+    justify-content: center;
+}
+
+.restaurant-card-all {
+  padding: 10px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+
+.card-text h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-text h5 {
+  margin: 5px 0 0;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+span {
+  display: none;
+}
+
+/******************* footer *************************/
+
+.footer {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 60px 40px 30px 40px;
+    background-color: #353535;
+    width: 100%;
+    /* height: 186px; */
+    gap: 25px;
+    color: white;
   }
   .position{
     position: absolute;
@@ -407,11 +365,12 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    font-family: 'shrikhand';
+    font-family: "shrikhand";
     font-weight: 400;
     word-wrap: break-word;
     margin-block-start: 0px;
     margin-block-end: 0px;
+
   }
   .links {
     text-decoration: none;
@@ -420,241 +379,12 @@ body {
     padding-inline-start: 0px;
     list-style-type: none;
     color: white;
-    gap: 7px;
+    gap: 40px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
   }
 
-  /***** test face******/
-
-  .new-label-overlay {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 10px;
-    margin: 20px;
-    width: 80px;
-    background-color: $tertiary;
-    color: #008766;
-    font-weight: 500;
-    font-size: 14px;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-    border-radius: 2px;
-    right: 5px;
-    top: 5px;
-  }
-  .cards-link {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    position: relative;
-    justify-content: flex-end;
-  }
-  .restaurant-container {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: $LightGrayBG;
-    gap:30px;
-
-    @media only screen and (min-width: 960px) {
-      flex-direction: row;
-    }
-
-  }
-  .cards-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-    max-width: 1080px;
-  }
-  .restaurant-card {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 500px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);  
-    background-color: white;
-    color: black;
-    text-decoration: none;
-  
-    .image-card-restaurant {
-      display: block;
-      object-fit: cover;
-      width: 100%;
-      height: 220px;
-      border-top-right-radius: 15px;
-      border-top-left-radius: 15px;
-    }
-  }
-  
-  .heart--container {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    position: absolute;
-    height: 25px;
-    margin-top: 5px;
-    right: 40px;
-    bottom: 30px;
-    .heart1 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 1;
-      transition: 0.3s;
-      opacity: 100%;
-      &:hover {
-        opacity: 0%;
-      }
-    }
-    .heart2 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      transition: 0.3s;
-      opacity: 0%;
-      &:hover {
-        opacity:100%;
-      }
-    }
-  }
-  .restaurant-card-all {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 15px 50px 15px 20px;
-    align-items: center;
-  }
-  .card-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 25px;
-    text-decoration: none;
-    color: black;
-  }
-
-
-
-
-
-/****spinner******/
-.spinner-container {
-  position: fixed;
-  z-index: 1;
+.spacing {
+  gap: 7px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-  animation: spinner-visable 3s forwards 1;
-  @keyframes spinner-visable {
-    100% {
-      overflow: hidden;
-      visibility: hidden;
-    }
-  }
-}
-
-.spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border: 7px solid $LightGrayBG;
-  border-top: 7px solid #9356DC;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  animation: spin 0.8s ease infinite;
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  }
-
-
-
-  @media only screen and (min-width: 960px) {
-    .menu {
-      width: 1055px;
-      padding: 0px 70px 0px 70px;
-
-    }
-  }
-
-
-  @media screen and (min-width: 960px) {
-    .footer {
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      gap: 50px;
-      height: 114px;
-      padding-bottom: inherit;
-  }
-  .unordered-list {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: inherit;
-}
-  }
-/****************heart restaurant*********/
-
-.hidden {
-    display: none;
-}
-
-.heart--container2 {
-    cursor: pointer;
-    margin-left: 10px; /* Adjust the margin as needed */
-}
-
-.heart2 {
-    display: none;
-}
-
-#heart-toggle:checked + .heart--container .heart1 {
-    display: none;
-}
-
-#heart-toggle:checked + .heart--container .heart2 {
-    display: block;
-}
-
-.heart--container2:hover .heart1 {
-    display: none;
-}
-
-.heart--container2:hover .heart2 {
-    display: block;
-}
-
-/* Visually hide the label */
-.heart--container2 {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
 }
