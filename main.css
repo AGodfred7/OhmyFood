@@ -89,7 +89,7 @@ header .location p {
   justify-content: space-evenly;
   background-color: #f6f6f6;
   width: 100%;
-  height: 37vh;
+  height: 50vh;
 }
 
 .about h2 {
@@ -405,9 +405,7 @@ span {
 .header-restaurants {
   display: flex;
   height: 63px;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px 0 20px;
+  position: relative;
 }
 .header-restaurants .arrow {
   position: absolute;
@@ -461,6 +459,8 @@ span {
 }
 
 .body-menu-pages {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   max-width: 100%;
   min-width: 375px;
@@ -476,6 +476,8 @@ span {
 }
 
 .meals-list {
+  display: flex;
+  flex-direction: column;
   justify-items: center;
   align-self: center;
   padding: 20px;
@@ -517,6 +519,8 @@ span {
 }
 
 .meal-part1 {
+  display: flex;
+  flex-direction: column;
   width: 640px;
   justify-content: center;
   padding: 0px 0px 0px 12px;
@@ -592,6 +596,8 @@ span {
 /***** Media Querys *******/
 @media screen and (max-width: 375px) {
   ul {
+    display: flex;
+    flex-direction: column;
     align-self: flex-start;
   }
   .menu-text {

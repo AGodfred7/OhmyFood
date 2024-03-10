@@ -16,15 +16,7 @@ $no-margin: 0px;
     margin: 0px;
   
 }
-@mixin flexRowRev {
-  display: flex;
-  flex-direction: row-reverse;
-}
-@mixin flexflowcenter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .body {
     margin: 0 auto;
     font-family: $font-roboto;
@@ -67,8 +59,6 @@ p {
 header {
     display: flex;
     flex-direction: column;
-
-
     .logo {
         display: flex;
         justify-content: center;
@@ -83,7 +73,9 @@ header {
     }
 
     .location {
-        @include flexflowcenter;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 15px;
         background: #eaeaea;
         font-family: $font-roboto;
@@ -97,6 +89,7 @@ header {
         font-family: $font-roboto;
         word-wrap: break-word;
     }
+
 }
 }
 
@@ -108,7 +101,7 @@ header {
   justify-content: space-evenly;
   background-color: #f6f6f6;
   width: 100%;
-  height: 37vh;
+  height: 50vh;
 }
   .about h2 {
       font-size: 24px;
@@ -127,7 +120,9 @@ header {
       width: 218px;
       height: 50px;
       border-radius: 25px;
-      @include flexflowcenter;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-size: 16px;
       border: none;
       font-weight: 500;
@@ -416,9 +411,7 @@ span {
 .header-restaurants {
   display: flex;
   height: 63px;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px 0 20px;
+  position: relative;
   .arrow {
     position: absolute;
     display: flex;
@@ -470,7 +463,8 @@ span {
     margin-top: -40px;
 }
 .body-menu-pages {
-
+  display: flex;
+  flex-direction: column; 
   justify-content: center;
   max-width: 100%;
   min-width: 375px;
@@ -484,7 +478,8 @@ span {
   border-color: #99E2D0;
 }
 .meals-list {
-  
+  display: flex;
+  flex-direction: column;
   justify-items: center;
   align-self: center;
   padding: 20px;
@@ -525,7 +520,8 @@ span {
 }
 
 .meal-part1 {
-  
+  display: flex;
+  flex-direction: column; 
   width: 640px;
   justify-content: center;
   padding: 0px 0px 0px 12px;
@@ -595,7 +591,8 @@ span {
 /***** Media Querys *******/
 @media screen and (max-width: 375px) {
   ul {
-    
+    display: flex;
+    flex-direction: column;
     align-self: flex-start;
   }
   .menu-text {
@@ -621,19 +618,22 @@ span {
 }
 @media screen and (min-width: 1440px) {
   .footer-background {
-    @include flexRowRev;  
+    display: flex;
+    flex-direction: row-reverse;  
     background-color: #353535;
     justify-content: flex-start;
     padding: 20px;
     height: 114px;
     align-items: flex-end;
     .footer-logo {
-      @include flexRowRev;
+      display: flex;
+      flex-direction: row-reverse;
       align-self: flex-end;
       padding-left: 60px
     }
     ul {
-      @include flexRowRev;
+      display: flex;
+      flex-direction: row-reverse;
       gap: 50px;
       align-items: flex-end;
       margin-bottom: $no-margin;
