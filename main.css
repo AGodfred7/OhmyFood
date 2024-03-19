@@ -422,7 +422,8 @@ span {
   text-decoration: none;
   color: white;
 }
-.unordered-list a{
+.unordered-list a,
+.links a{
   text-decoration: none;
   color: #ffffff;
 }
