@@ -141,7 +141,7 @@ header {
   padding-bottom: 50px;
 }
 .how h2 {
-      margin-top: 48px;
+      padding-top: 48px;
       font-size: 24px;
       font-weight: 700;
       width: 100%;
@@ -411,6 +411,12 @@ span {
     gap: 40px;
     display: flex;
     justify-content: space-evenly;
+
+    a{
+      text-decoration: none;
+      color: white;
+    }
+
   }
 
 .spacing {
@@ -696,7 +702,13 @@ span {
 }
 
 /***** Media Querys *******/
-@media screen and (max-width: 375px) {
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+ 
+  .section1,
+  .article1 {
+    padding: 0px 20px 0px 20px;
+  }
+
   ul {
     display: flex;
     flex-direction: column;
@@ -707,6 +719,27 @@ span {
     width: 190px; 
     overflow: hidden;
     text-overflow: ellipsis; 
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+
+  .footer{
+    height: 186px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 25px 22px 25px;
+    gap: 16px;
+  }
+  .links {
+    gap: 7px;
+    min-width: 190px;
+    font-size: 16px;
+    font-weight: 500;
   }
 }
 

@@ -10,88 +10,146 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<body>
+<body class="menu-pages">
     <header class="header-restaurants">
         <a href="index.html"><img src="/Users/godfr/Documents/OhmyFood/images/icons/GoBack.svg" alt="location pin"/></a>
         <h1 class="logo">ohmyfood</h1>
     </header>
-    <section class="pic4"></section>
-    <main class="menu">
+    <img class="menu-picture" src="/Users/godfr/Documents/OhmyFood/images/restaurants/The-bay-leaf.jpg" alt="restaurant"/>
+    <article class="menu">
         <div class="name">
-            <h2>Elderflower</h2>
-            <img src="/Users/godfr/Documents/OhmyFood/images/icons/heart-regular.svg" alt="location pin"/>
+            <h2>The Bay Leaf</h2>
+            <div class="heart--container">
+                <input type="checkbox" id="heart1" class="heart-toggle1"/>
+                <label for="heart1"><span>heart</span>
+                    <svg class="heart1" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!--  linear gradient for heart fill -->
+                        <defs>
+                            <linearGradient id="heartGradient" x1="0" y1="0" x2="100%" y2="0">
+                                <stop offset="0%" stop-color="#9356DC" />
+                                <stop offset="100%" stop-color="#FF79DA" />
+                            </linearGradient>
+                            <!-- linear gradient for heart fill on hover -->
+                            <linearGradient id="heartHoverGradient" x1="0" y1="0" x2="100%" y2="0">
+                                <stop offset="0%" stop-color="#9356DC" />
+                                <stop offset="100%" stop-color="#FF79DA" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M12.7206 2.40576L12.7208 2.40551C14.7226 0.15233 17.9035 -0.169451 20.0243 1.80187C22.5186 4.1243 22.656 8.32326 20.4123 10.8492L20.4122 10.8493L12.0978 20.2148C11.7596 20.5956 11.2372 20.5956 10.899 20.2148L2.5848 10.8495C0.34506 8.32357 0.482456 4.1245 2.97664 1.80201C5.09762 -0.169649 8.28271 0.152585 10.2799 2.40514L10.2805 2.40576L11.127 3.35732L11.5005 3.77727L11.8741 3.35732L12.7206 2.40576Z" stroke="#101010"/>
+                    </svg>
+                </label>                                                                                     
+            </div>
         </div>
-        <div class="list">
+        <div class="meals-list">
             <h3>STARTERS</h3> 
-            <div class="dish">
-                <p class="text">Brisket ravioli</p>
-                <p class="text second">Served with truffle cream</p>
-                <p class="price">£25</p>
+            <div class="dish starters">
+                <div class="dish-description">
+                    <h4 class="text">Smoked salmon</h4>
+                    <p class="text second">With beetroot and horseradish</p>
+                </div>
+                <p class="price">
+                    <b>£25</b>
+                </p>
+                <img class="checkbox" src="/users/godfr/Documents/OhmyFood/images/icons/checkbox.svg" alt="checkbox"/>
             </div>
-            <div class="dish">
-                <p class="text">Beluga caviar</p>
-                <p class="text second">Served on buckwheat blinis</p>
-                <p class="price">£35</p>
+            <div class="dish starters">
+                <div class="dish-description">
+                    <h4 class="text">Ham hock terrine</h4>
+                    <p class="text second">With piccalilli</p>
+                </div>
+                <p class="price">
+                    <b>£35</b>
+                </p>
+                <img class="checkbox" src="/users/godfr/Documents/OhmyFood/images/icons/checkbox.svg" alt="checkbox"/>
             </div>
-            <div class="dish">
-                <p class="text">Lobster with pumpkin foam</p>
-                <p class="text second">And orange zest</p>
-                <p class="price">£20</p>
-            </div>
-            <div class="dish">
-                <p class="text">Duck terrine</p>
-                <p class="text second">Fig jam and toasted brioche</p>
-                <p class="price">£35</p>
+            <div class="dish starters">
+                <div class="dish-description">
+                    <h4 class="text">Poached egg</h4>
+                    <p class="text second">With asparagus and hollandaise</p>
+                </div>
+                <p class="price">
+                    <b>£20</b>
+                </p>
+                <img class="checkbox" src="/users/godfr/Documents/OhmyFood/images/icons/checkbox.svg" alt="checkbox"/>
             </div>
         </div>
-        <div class="list">
+        <div class="meals-list">
             <h3>MAINS</h3> 
-            <div class="dish">
-                <p class="text">Herb roast chicken</p>
-                <p class="text second">With truffle cream</p>
-                <p class="price">£40</p>
+            <div class="dish mains">
+                <div class="dish-description">
+                    <h4 class="text">Beef fillet with herb butter</h4>
+                    <p class="text second">Served with a vegetable medley</p>
+                </div>
+                <p class="price">
+                    <b>£40</b>
+                </p>
+                <img class="checkbox" src="/users/godfr/Documents/OhmyFood/images/icons/checkbox.svg" alt="checkbox"/>
             </div>
-            <div class="dish">
-                <p class="text">Roasted lobster</p>
-                <p class="text second">With seasoning vegetables</p>
-                <p class="price">£35</p>
+            <div class="dish mains">
+                <div class="dish-description">
+                    <h4 class="text">Braised oxtail cottage pie</h4>
+                    <p class="text second">With black truffle and parsnip puree</p>
+                </div>
+                <p class="price">
+                    <b>£35</b>
+                </p>
+                <img class="checkbox" src="/users/godfr/Documents/OhmyFood/images/icons/checkbox.svg" alt="checkbox"/>
             </div>
-            <div class="dish">
-                <p class="text">Aberdeen Angus prime rib</p>
-                <p class="text second">With parsnip mash</p>
-                <p class="price">£44</p>
+            <div class="dish mains">
+                <div class="dish-description">
+                    <h4 class="text">Fillet of turbot</h4>
+                    <p class="text second">With citrus dressing</p>
+                </div>
+                <p class="price">
+                    <b>£44</b>
+                </p>
+                <img class="checkbox" src="/users/godfr/Documents/OhmyFood/images/icons/checkbox.svg" alt="checkbox"/>
             </div>
         </div>
-        <div class="list">
+        <div class="meals-list">
             <h3>DESSERTS</h3> 
-            <div class="dish">
-                <p class="text">Assortment of dessert</p>
-                <p class="text second">With lime biscuit</p>
-                <p class="price">£18</p>
+            <div class="dish desserts">
+                <div class="dish-description">
+                    <h4 class="text">Treacle tart</h4>
+                    <p class="text second">With Cornish clotted cream</p>
+                </div>
+                <p class="price">
+                    <b>£18</b>
+                </p>
+                <img class="checkbox" src="/users/godfr/Documents/OhmyFood/images/icons/checkbox.svg" alt="checkbox"/>
             </div>
-            <div class="dish">
-                <p class="text">Crème brûlée</p>
-                <p class="text second">With forest fruits</p>
-                <p class="price">£22</p>
+            <div class="dish desserts">
+                <div class="dish-description">
+                    <h4 class="text">Lemon posset</h4>
+                    <p class="text second">With shortbread biscuit</p>
+                </div>
+                <p class="price">
+                    <b>£22</b>
+                </p>
+                <img class="checkbox" src="/users/godfr/Documents/OhmyFood/images/icons/checkbox.svg" alt="checkbox"/>
             </div>
-            <div class="dish">
-                <p class="text">Tiramisu </p>
-                <p class="text second">With hazelnuts</p>
-                <p class="price">£23</p>
+            <div class="dish desserts">
+                <div class="dish-description">
+                    <h4 class="text">Chocolate mousse</h4>
+                    <p class="text second">With a hint of chili and a hazelnut tuile</p>
+                </div>
+                <p class="price">
+                    <b>£23</b>
+                </p>
+                <img class="checkbox" src="/users/godfr/Documents/OhmyFood/images/icons/checkbox.svg" alt="checkbox"/>
             </div>
         </div>
-        <div class="position-btn">
-            <button class="Order-btn" type="button">Order</button>
-        </div>
-    </main>     
+        <button class="Order-btn" type="button">Order</button>
+        
+    </article>     
     <footer class="footer">
         <h2 class="title">ohmyfood</h2>    
         <ul class="unordered-list">
             <li class="spacing"><img src="/Users/godfr/Documents/OhmyFood/images/icons/cuttlery.svg" alt="cuttlery"/><a>Suggest a restaurant</a></li>
             <li class="spacing"><img src="/Users/godfr/Documents/OhmyFood/images/icons/hands.svg" alt="handshare"/><a>Become a partner</a></li>
             <li><a>Legal notice</a></li>
-            <li><a>Contact</a></li>
+            <li><a href="mailto:info@ohmyfood.com">contact us</a></li>
         </ul>
     </footer>
 
-</body>
+</body>    
