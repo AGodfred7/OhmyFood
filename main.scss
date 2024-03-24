@@ -755,6 +755,10 @@ span {
   .checkbox {
     display: none;
   }
+  .price {
+    left: 0px;
+    position: unset;
+  }
 }
 
 @media screen and (min-width: 1440px) {
