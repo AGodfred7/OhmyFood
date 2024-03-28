@@ -7,8 +7,8 @@ $secondarycolor: #FF79DA;
 $LightGrayBG: #F6F6F6;
 $tertiary: #99E2D0;
 $mainfontfamily: "Roboto", sans-serif;
-$secondaryfont: Shrikhand;
-$no-margin: 0px;
+$secondaryfont: "Shrikhand";
+$no-margin: 0;
 
 * {
     box-sizing: border-box;
@@ -19,7 +19,7 @@ $no-margin: 0px;
 
 .body {
     margin: 0 auto;
-    font-family: $font-roboto;
+    font-family:$font-roboto;
     background-color: #ffffff;
     max-width: 1440px;
 }
@@ -30,7 +30,7 @@ $no-margin: 0px;
 .article1 {
   padding: 0px 180px 0px 180px;
   align-items: center;
-  background-color: $LightGrayBG;
+  background-color:$LightGrayBG;
 }
 
 .b {
@@ -157,7 +157,7 @@ header {
       @media only screen and (min-width: 960px) {
         flex-direction: row;
       }
-  }
+}
 
 .how-filter {
     background-color: #f6f6f6;
@@ -251,7 +251,8 @@ header {
 }
 
 .heart-toggle + label svg {
-  cursor: pointer;
+
+    cursor: pointer;
     transition: fill 0.3s ease, stroke 0.3s ease; 
     position: absolute;
     bottom: 30px; 
@@ -262,7 +263,7 @@ header {
 }
 
 .heart-toggle1 + label svg {
-  cursor: pointer;
+    cursor: pointer;
     transition: fill 0.3s ease, stroke 0.3s ease; 
     position: absolute; 
     display: inline-block;
@@ -285,33 +286,51 @@ header {
 }
 
 /*  linear gradient for heart fill */
-#heartGradient {
+#heartGradient,
+#heartGradient1,
+#heartGradient2,
+#heartGradient3 {
   fill: url(#heartGradient);
 }
 
 /*  linear gradient for heart fill on hover */
-#heartHoverGradient {
+#heartHoverGradient,
+#heartHoverGradient1,
+#heartHoverGradient2,
+#heartHoverGradient3 {
   fill: url(#heartHoverGradient);
 }
 
 /*  linear gradient */
-linearGradient#heartGradient {
+linearGradient#heartGradient,
+linearGradient#heartGradient1,
+linearGradient#heartGradient2,
+linearGradient#heartGradient3 {
   stop-color: #9356DC;
   stop-opacity: 1;
 }
 
-linearGradient#heartGradient stop:nth-child(2) {
+linearGradient#heartGradient stop:nth-child(2),
+linearGradient#heartGradient1 stop:nth-child(2),
+linearGradient#heartGradient2 stop:nth-child(2),
+linearGradient#heartGradient3 stop:nth-child(2) {
   stop-color: #FF79DA;
   stop-opacity: 1;
 }
 
 /*  linear gradient for heart fill on hover */
-linearGradient#heartHoverGradient {
+linearGradient#heartHoverGradient,
+linearGradient#heartHoverGradient1,
+linearGradient#heartHoverGradient2,
+linearGradient#heartHoverGradient3 {
   stop-color: #9356DC; 
   stop-opacity: 1;
 }
 
-linearGradient#heartHoverGradient stop:nth-child(2) {
+linearGradient#heartHoverGradient stop:nth-child(2),
+linearGradient#heartHoverGradient1 stop:nth-child(2),
+linearGradient#heartHoverGradient2 stop:nth-child(2),
+linearGradient#heartHoverGradient3 stop:nth-child(2) {
   stop-color: #FF79DA;
   stop-opacity: 1;
 }
@@ -815,42 +834,3 @@ span {
     }
   }  
 }
-/****spinner******/
-.spinner-container {
-  position: fixed;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-  animation: spinner-visable 3s forwards 1;
-  @keyframes spinner-visable {
-    100% {
-      overflow: hidden;
-      visibility: hidden;
-    }
-  }
-}
-
-.spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border: 7px solid $LightGrayBG;
-  border-top: 7px solid #9356DC;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  animation: spin 0.8s ease infinite;
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  }
